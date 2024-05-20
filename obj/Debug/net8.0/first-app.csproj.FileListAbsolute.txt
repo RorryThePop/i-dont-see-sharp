@@ -12,3 +12,4 @@
 /Users/rorrythepop/Desktop/programming/C#/first-app/obj/Debug/net8.0/first-app.pdb
 /Users/rorrythepop/Desktop/programming/C#/first-app/obj/Debug/net8.0/first-app.genruntimeconfig.cache
 /Users/rorrythepop/Desktop/programming/C#/first-app/obj/Debug/net8.0/ref/first-app.dll
+/Users/rorrythepop/Desktop/programming/C#/first-app/obj/Debug/net8.0/first-app.sourcelink.json

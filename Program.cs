@@ -308,3 +308,319 @@ for (var i = 0; i < dim1; i++)
     }
     Console.WriteLine();
 }*/
+
+// int[] arr = {1, 2, 3, 4, 5, -5, -2, -4, -1, -9};
+
+/*for (var i = 0; i < arr.Length; i++)
+{
+    if (arr[i] < 0)
+    {
+        Console.WriteLine($"{arr[i]} is less than 0");
+    }
+}*/
+// int result = 0;
+// foreach (var i in arr)
+// {
+//     if (i > 0)
+//     {
+//         result++;
+//     }
+// }
+// Console.WriteLine(result);
+
+//Array inversion
+/*int arrLength = arr.Length;
+int arrMidpoint = arrLength / 2;
+int result;
+for (int i = 0; i < arrMidpoint; i++)
+{
+    result = arr[i];
+    arr[i] = arr[arrLength - arrMidpoint - 1];
+    arr[arrLength - arrMidpoint - 1] = result;
+}
+
+foreach (var i in arr) Console.Write($"{i} \t");*/
+
+/*int[] newArr = {1, 2, 3, 4, 5, -5, -4, -3, -2, -1};
+int arrLength = newArr.Length;
+int arrMidpoint = arrLength / 2;
+int result;
+
+for (int i = 0; i < arrMidpoint; i++)
+{
+    result = newArr[i];
+    newArr[i] = newArr[arrLength - i - 1];
+    newArr[arrLength - i - 1] = result;
+}
+
+foreach (var c in newArr)
+{
+    Console.Write($"{c} \t");
+}*/
+
+
+/*int[] arr = new[] { 1, 2, 3, 4, 5, -5, -4, -3, -2, -1 };
+int arrLength = arr.Length;
+int arrMidpoint = arrLength / 2;
+int result;
+
+for (int i = 0; i < arrMidpoint; i++)
+{
+    result = arr[i];
+    arr[i] = arr[arrLength - i - 1];
+    arr[arrLength - i - 1] = result;
+}
+
+foreach (var c in arr)
+{
+    Console.Write($"{c} \t");
+}*/
+
+// string[] arrStr = { "hello", "world", "its", "me" };
+
+/*int k = arrStr.Length;
+int n = k / 2;
+string strResult;
+
+for (var i = 0; i < n; i++)
+{
+    strResult = arrStr[i];
+    arrStr[i] = arrStr[k - i - 1];
+    arrStr[k - i - 1] = strResult;
+}
+
+foreach (var c in arrStr)
+{
+    Console.Write($"{c} \t");
+}*/
+
+// int[] intArr = { 1, 2, 3, 4, -4, -3, -2, -1 };
+
+/*int newTemp;
+newTemp = intArr[1];
+intArr[1] = intArr[intArr.Length - 2];
+intArr[intArr.Length - 2] = newTemp;
+
+foreach (var c in intArr)
+{
+    Console.Write($"{c} \t");
+}*/
+/*int x = intArr.Length;
+int y = x / 2;
+int temp;
+
+for (var i = 0; i < x; i++)
+{
+    temp = intArr[i];
+    intArr[i] = intArr[x - i - 1];
+    intArr[x - i - 1] = temp;
+}*/
+
+// foreach (var c in intArr)
+// {
+//     Console.Write($"{c} \t");
+// }
+
+// FILTERING ARRAY
+
+// int[] arrToFilter = { 1, 2, 3, -4, -2, 24, -93, -123, -23, 239, 11 };
+
+/*int[] randomArr = { 1, 3, 6, 2, 0, 2, 555, 2 };
+int temp;*/
+
+/*for (var i = 0; i < arrToFilter.Length - 1; i++)
+{
+    for (var j = 0; j < arrToFilter.Length; j++)
+    {
+        if (arrToFilter[i] > arrToFilter[j])
+        {
+            temp = arrToFilter[j];
+            arrToFilter[j] = arrToFilter[i];
+            arrToFilter[i] = temp;
+        }
+    }
+}
+
+foreach (var c in arrToFilter)
+{
+    Console.Write($"{c} \t");
+}*/
+
+
+/*
+for (var i = 0; i < randomArr.Length; i++)
+{
+    for (var j = 0; j < randomArr.Length; j++)
+    {
+        if (randomArr[i] > randomArr[j])
+        {
+            temp = randomArr[i];
+            randomArr[i] = randomArr[j];
+            randomArr[j] = temp;
+        }
+    }
+}
+
+
+foreach (var c in randomArr)
+{
+    Console.Write($"{c} \t");
+}
+*/
+
+/*int[] newArr = { 1, 2, 3, 4, -5, -3, -4, -2, -1 };
+
+int result;
+for (int i = 0; i < newArr.Length; i++)
+{
+    for (int j = 0; j < newArr.Length - 1; j++)
+    {
+        if (newArr[i] < newArr[j])
+        {
+            result = newArr[i];
+            newArr[i] = newArr[j];
+            newArr[j] = result;
+        }
+    }
+}
+
+foreach (var c in newArr)
+{
+    Console.Write($"{c} \t");
+}*/
+
+//METHODS
+
+
+/*void SayHello(int c, string b)
+{
+    Console.WriteLine($"{c}: {b}");
+}
+
+SayHello(5, "Blyat");
+
+void Greetings(string HelloWord) => Console.WriteLine(HelloWord);
+Greetings("OLA QUE PASSA CARALHO");
+
+string[] newArr = { "Hello", "Worlds", "This is ", "Us" };
+void Summarize(int a, string[] strArr)
+{
+    string result;
+    int x = strArr.Length;
+    int arrMidpoint = x / 2;
+    result = newArr[a];
+    newArr[a] = newArr[x - a - 1];
+    newArr[x - a - 1] = result;
+}
+
+Summarize(0, newArr);
+
+foreach (var c in newArr)
+{
+    Console.Write($"{c} \t");
+}
+
+Console.WriteLine(string.Join(", ", newArr));
+
+
+void Salaries(string name, decimal salary, string companyName = "undefined")
+{
+    Console.Write($"{name} works in {companyName} and has ${salary} per month \t");
+}
+
+Salaries("Yury", 120, "MPS");
+Salaries("John", 34);*/
+
+
+
+/*string getMessage()
+{
+    return "hello";
+}
+Console.WriteLine(getMessage());*/
+
+/*string sendMessage(string message)
+{
+    return message;
+}
+
+void AcceptMessage(string message)
+{
+    Console.WriteLine(message);
+}
+
+AcceptMessage(sendMessage("HEllo c#"));
+
+int doubleSumm(int x, int y)
+{
+    return x * y;
+}
+
+int result = doubleSumm(5, 2);
+Console.WriteLine(result);*/
+
+
+/*void SomeMethod( ref int a)
+{
+    a++;
+    Console.WriteLine(a);
+}
+
+int num = 10;
+Console.WriteLine(num); //10
+SomeMethod(ref num); //11
+Console.WriteLine(num); //now its num is gonna be 11*/
+
+//METHOD OUT
+
+/*
+void Greetings(int a, int b, out int result, out int result2)
+{
+    result = a * b;
+    result2 = (a - b) * 5;
+}
+
+int multiplication;
+int separation;
+Greetings(5, 10, out multiplication, out separation);
+
+Console.WriteLine($"Multiplication is {multiplication}");
+Console.WriteLine($"Separation is {separation}");
+*/
+
+/*void Greetings(int x, int y, out int zx, out int zyx)
+{
+    zx = x * y;
+    zyx = y - x * 2;
+}
+
+int temp;
+int temp2;
+
+Greetings(10, 3, out temp, out temp2);
+Console.WriteLine($"this method can return {temp}");
+Console.WriteLine($"this method can return {temp2} at the same function and scope!");*/
+int[] someArr = { 1, 2, 3, 4, 5 };
+
+void filterArr(int a, out int xy, params int[] arr)
+{
+    int temp;
+    temp = arr[0];
+    arr[0] = arr[arr.Length - 1];
+    arr[arr.Length - 1] = temp;
+    foreach (var c in someArr)
+    {
+        Console.WriteLine($"{c} \t");
+    }
+    xy = temp;
+}
+
+int temp;
+filterArr(5,  out temp ,someArr);
+Console.WriteLine($"Somethis is equal to {temp}");
+
+
+
+
+
+
